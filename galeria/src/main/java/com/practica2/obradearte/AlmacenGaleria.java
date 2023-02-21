@@ -87,4 +87,22 @@ public class AlmacenGaleria {
         System.out.println(OBRA_MODIFICADA);
     }// cierre metodo
 
+    // muestra solo ID y nombre para que el usuario pueda seleccionar la obra
+    // correcta en otro metodo
+    public static void mostrarIdYNombre() {
+        copiarArrayMasObrasNueva();
+        for (int i = 0; i < almacenObras.length; i++) {
+            System.out.println(almacenObras[i].verIdYNombreToString());
+        } // cierre for
+    }// cierre metodo
+
+    // Se usa para poner un ID en funcion a las obras que haya en el array
+    public static int ponerIdAutomatico() {
+        copiarArrayMasObrasNueva();
+        int id = 0;
+        for (int i = 0; i < almacenObras.length; i++) {
+            id++;
+        }
+        return id += UNO;
+    } // cierre metodo
 }
