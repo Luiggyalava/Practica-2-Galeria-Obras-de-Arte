@@ -1,5 +1,8 @@
 package com.practica2.obradearte;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Menu {
     // booblean para bucle menu
     public static boolean terminar = false;
@@ -68,5 +71,41 @@ public class Menu {
     public static final String LINEAS_DIVISORAS = "---------------------------------------";
     public static final String OBRA_AGREGADA = "Obra agregada";
     public static final String OBRA_MODIFICADA = "Obra Modificada";
+
+    public static String solicitarDatosString() {
+        Scanner solicitar = new Scanner(System.in);
+        String opcion = null;
+        try {
+            opcion = solicitar.nextLine();
+        } catch (InputMismatchException ime) {
+            System.out.println(MENSAJE_ERROR);
+            solicitar.nextInt();
+        }
+        return opcion;
+    }
+
+    public static double solicitarDatosDouble() {
+        Scanner solicitar = new Scanner(System.in);
+        double opcion = 0;
+        try {
+            opcion = solicitar.nextDouble();
+        } catch (InputMismatchException ime) {
+            System.out.println(MENSAJE_ERROR);
+            solicitar.nextInt();
+        }
+        return opcion;
+    }
+
+    public static int solicitarDatosInt() {
+        Scanner solicitar = new Scanner(System.in);
+        int opcion = 0;
+        try {
+            opcion = solicitar.nextInt();
+        } catch (InputMismatchException ime) {
+            System.out.println(MENSAJE_ERROR);
+            solicitar.nextInt();
+        }
+        return opcion;
+    }
 
 }// cierre class
