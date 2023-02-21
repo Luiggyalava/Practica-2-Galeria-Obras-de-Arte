@@ -1,6 +1,7 @@
 package com.practica2.obradearte;
 
 import java.util.Arrays;
+import static com.practica2.obradearte.Menu.*;
 
 public class AlmacenGaleria {
     private static final int UNO = 1;
@@ -64,5 +65,26 @@ public class AlmacenGaleria {
         }
         return obraNueva;
     }// cierre crear Obras
+
+    // Modifica una obra seleccionada
+    public static void modificarObras(int opcion, String nombre, String autor, String tipo, double precio,
+            double altura,
+            double peso, int piezas, String descripcion, String tecnicaOMaterial) {
+
+        for (ObraDeArte unaObraArte : almacenObras) {
+            if (unaObraArte.getId() == opcion) {
+                unaObraArte.setNombre(nombre);
+                unaObraArte.setAutor(autor);
+                unaObraArte.setTipo(tipo);
+                unaObraArte.setPrecio(precio);
+                unaObraArte.setAlturametros(altura);
+                unaObraArte.setPesoToneladas(peso);
+                unaObraArte.setNumeropiezas(piezas);
+                unaObraArte.setDescripcion(descripcion);
+                break;
+            }
+        } // cierre for
+        System.out.println(OBRA_MODIFICADA);
+    }// cierre metodo
 
 }
