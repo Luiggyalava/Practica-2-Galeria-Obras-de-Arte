@@ -150,7 +150,6 @@ public class GalariaApp {
                     System.out.println(MENSAJE_VISUALIZAR);
                     AlmacenGaleria.mostrarIdYNombre();
                     opcion = seleccionOpcion.nextInt();
-                    opcion -= 1;
                     System.out.println(almacenObras[opcion].verUnaObraToString());
                     break;
 

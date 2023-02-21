@@ -103,7 +103,7 @@ public class ObraDeArte {
     // formato para ver una obras
     public String verUnaObraToString() {
         return "\n" + "Id: " + this.id + "\n" + "Tipo: " + this.tipo + "\n" + "Nombre: " + this.nombre + "\n"
-                + "Autor: " + this.autor + "\n" + "Precio" + this.precio + "\n" + "Altura" + this.alturametros +
+                + "Autor: " + this.autor + "\n" + "Precio: " + this.precio + "\n" + "Altura: " + this.alturametros +
                 "\n" + "Peso: " + this.pesoToneladas + "\n" + "Numero de Piezas: " + this.numeropiezas +
                 "\n" + "Descripcion: " + this.descripcion;
     }
