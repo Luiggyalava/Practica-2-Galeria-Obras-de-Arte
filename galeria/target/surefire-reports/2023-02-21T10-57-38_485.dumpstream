@@ -1,0 +1,5 @@
+# Created at 2023-02-21T10:57:38.801
+Boot Manifest-JAR contains absolute paths in classpath 'd:\Curso DAW\Programacion\Segundo Trimestre\Practica-2-Galeria-Obras-de-Arte\galeria\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
