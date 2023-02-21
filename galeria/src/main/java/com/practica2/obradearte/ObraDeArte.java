@@ -112,4 +112,10 @@ public class ObraDeArte {
     public String verIdYNombreToString() {
         return this.id + " " + this.nombre;
     }
+
+    // formato para imprimir visor de Etiqueta
+    public String imprimirEtiquetaToString() {
+        return "\nNombre: " + this.nombre + "\nAutor: " + this.autor + "\nDescripcion: " + this.descripcion;
+    }
+
 }
