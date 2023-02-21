@@ -2,39 +2,50 @@ package com.practica2.obradearte;
 
 public class ObraDeArte {
     // atributos
+
     private int id;
     private String nombre;
     private String autor;
+    private String tipo;
     private double precio;
     private double alturametros;
-    private String descripcion;
-    private double pesotoneladas;
+    private double pesoToneladas;
     private int numeropiezas;
+    private String descripcion;
 
     // constructor
-    public ObraDeArte(int id, String nombre, String autor, double precio, double alturametros, String descripcion,
-            double pesotoneladas, int numeropiezas) {
+    public ObraDeArte(int id, String nombre, String autor, String tipo, double precio, double alturametros,
+            double pesotoneladas, int numeropiezas, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.autor = autor;
+        this.tipo = tipo;
         this.precio = precio;
         this.alturametros = alturametros;
-        this.descripcion = descripcion;
-        this.pesotoneladas = pesotoneladas;
+        this.pesoToneladas = pesotoneladas;
         this.numeropiezas = numeropiezas;
+        this.descripcion = descripcion;
     }
 
-    // metodo
+    // metodos
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
+    public String getTipo() {
+        return this.tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -42,7 +53,7 @@ public class ObraDeArte {
     }
 
     public String getAutor() {
-        return autor;
+        return this.autor;
     }
 
     public void setAutor(String autor) {
@@ -50,7 +61,7 @@ public class ObraDeArte {
     }
 
     public double getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     public void setPrecio(double precio) {
@@ -58,7 +69,7 @@ public class ObraDeArte {
     }
 
     public double getAlturametros() {
-        return alturametros;
+        return this.alturametros;
     }
 
     public void setAlturametros(double alturametros) {
@@ -66,27 +77,34 @@ public class ObraDeArte {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return this.descripcion;
     }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public double getPesotoneladas() {
-        return pesotoneladas;
+    public double getPesoToneladas() {
+        return this.pesoToneladas;
     }
 
-    public void setPesotoneladas(double pesotoneladas) {
-        this.pesotoneladas = pesotoneladas;
+    public void setPesoToneladas(double pesotoneladas) {
+        this.pesoToneladas = pesotoneladas;
     }
 
     public int getNumeropiezas() {
-        return numeropiezas;
+        return this.numeropiezas;
     }
 
     public void setNumeropiezas(int numeropiezas) {
         this.numeropiezas = numeropiezas;
     }
 
+    // formato para ver una obras
+    public String verUnaObraToString() {
+        return "\n" + "Id: " + this.id + "\n" + "Tipo: " + this.tipo + "\n" + "Nombre: " + this.nombre + "\n"
+                + "Autor: " + this.autor + "\n" + "Precio" + this.precio + "\n" + "Altura" + this.alturametros +
+                "\n" + "Peso: " + this.pesoToneladas + "\n" + "Numero de Piezas: " + this.numeropiezas +
+                "\n" + "Descripcion: " + this.descripcion;
+    }
 }
