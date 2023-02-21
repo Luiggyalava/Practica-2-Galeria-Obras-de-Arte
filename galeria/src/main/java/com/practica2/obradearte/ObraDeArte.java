@@ -107,4 +107,9 @@ public class ObraDeArte {
                 "\n" + "Peso: " + this.pesoToneladas + "\n" + "Numero de Piezas: " + this.numeropiezas +
                 "\n" + "Descripcion: " + this.descripcion;
     }
+
+    // formato para ver solo Id y nombre
+    public String verIdYNombreToString() {
+        return this.id + " " + this.nombre;
+    }
 }
