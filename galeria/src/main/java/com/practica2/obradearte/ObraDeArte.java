@@ -152,4 +152,24 @@ public class ObraDeArte {
         return precioAdicional;
     }// cierre calcpreciopiezas
 
+    // calcular comision de Escultura
+    public double comisionGaleria() {
+        double comision = this.precio * 0.25;
+        return comision;
+    }
+    // calcular descuento de Cuadro
+
+    public double descPrecioCuadro() {
+        double descuento = this.precio * 0.10;
+        return descuento;
+    }
+
+    // calcular descuento de Escultura
+    public double descPrecioEscultura() {
+        final int MANIPULACION = 50;
+        double descuento = this.precio * 0.20;
+        descuento += MANIPULACION;
+        return descuento;
+    }
+
 }
