@@ -118,4 +118,38 @@ public class ObraDeArte {
         return "\nNombre: " + this.nombre + "\nAutor: " + this.autor + "\nDescripcion: " + this.descripcion;
     }
 
+    // calcular Precio por Peso
+    public double calcularPrecioPeso() {
+        if (this.pesoToneladas > 1) {
+            final int PRECIO_PESO_MAYOR = 100;
+            return PRECIO_PESO_MAYOR;
+        } else {
+            final int PRECIO_PESO_MENOR = 20;
+            return PRECIO_PESO_MENOR;
+        }
+    }// cierre calcpreciotneladas
+
+    // calcular Precio Altura
+    public double calcularPrecioAltura() {
+        if (this.alturametros > 2) {
+            final int PRECIO_ALTURA_MAYOR = 100;
+            return PRECIO_ALTURA_MAYOR;
+        } else {
+            final int PRECIO_ALTURA_MENOR = 20;
+            return PRECIO_ALTURA_MENOR;
+        }
+    }// cierre calcprecioaltura
+
+    // calcular el precio de pieza Extra
+    public double calcularPrecioPiezas() {
+        int piezastemp = this.numeropiezas;
+        double precioAdicional = 0;
+        while (piezastemp != 2) {
+            final int PRECIO_POR_PIEZA = 10;
+            precioAdicional += PRECIO_POR_PIEZA;
+            piezastemp--;
+        }
+        return precioAdicional;
+    }// cierre calcpreciopiezas
+
 }
