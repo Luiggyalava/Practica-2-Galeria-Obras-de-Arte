@@ -172,4 +172,19 @@ public class ObraDeArte {
         return descuento;
     }
 
+    // calcular precio final de cuadro
+    public double precioFinalCuadro() {
+        double precioFinal = this.precio + calcularPrecioAltura() + calcularPrecioPeso()
+                + calcularPrecioPiezas() + comisionGaleria() - descPrecioCuadro();
+        return precioFinal;
+    }
+
+    // calcular precio final de Escultura
+    public double preciofinalEscultura() {
+        double precioFinal = this.precio + calcularPrecioAltura() + calcularPrecioPeso()
+                + calcularPrecioPiezas() + comisionGaleria() - descPrecioEscultura();
+
+        return precioFinal;
+    }
+
 }
