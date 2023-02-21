@@ -105,4 +105,19 @@ public class AlmacenGaleria {
         }
         return id += UNO;
     } // cierre metodo
-}
+
+    // Ver el precio de una Obra
+    public static void verPrecioObra(int opcion) {
+        copiarArrayMasObrasNueva();
+        for (ObraDeArte unaObra : almacenObras) {
+            if (unaObra.getId() == opcion && unaObra.getTipo() == "Cuadro") {
+                System.out.println("El precio del cuadro es: " + unaObra.precioFinalCuadro());
+                break;
+            } else if (unaObra.getId() == opcion && unaObra.getTipo() == "Escultura") {
+                unaObra.preciofinalEscultura();
+                System.out.println("El precio de la escultura es: " + unaObra.preciofinalEscultura());
+                break;
+            } // cierre elseif
+        } // cierre for
+    }// cierre metodo
+} // cierre class
