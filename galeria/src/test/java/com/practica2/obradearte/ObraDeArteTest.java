@@ -25,7 +25,7 @@ public class ObraDeArteTest {
     }
 
     @Test
-    public void indicarNumeroPiezas() {
+    public void devuelvePiezasCorrectas() {
         double expected = 6;
         assertEquals(expected, cuadro.getNumeropiezas());
     }
